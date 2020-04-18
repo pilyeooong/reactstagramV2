@@ -1,0 +1,8 @@
+.isort.cfg
+.vscode/
+.python-version
+db.sqlite3
+media/
+staticfiles/
+static/
+.env
