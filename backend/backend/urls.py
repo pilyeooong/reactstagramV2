@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('accounts/', include('accounts.urls')),
+    path('', include('posts.urls')),
     path('identicon/image/<path:data>.png', pydenticon_image, name='pydenticon_image')
 ]
 
