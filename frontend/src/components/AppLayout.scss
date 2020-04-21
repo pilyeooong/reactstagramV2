@@ -1,0 +1,27 @@
+.wrapper {
+  width: 1024px;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "header header header"
+    "container container sidebar"
+    "footer footer footer";
+  margin: 10px auto;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+  }
+  .container {
+    grid-area: container;
+  }
+  .sidebar {
+    grid-area: sidebar;
+
+  }
+  .footer {
+    grid-area: footer;
+  }
+}
