@@ -1,29 +1,23 @@
-.wrapper {
+.wrappers {
   width: 1024px;
   max-width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
     "header header header"
-    "container container sidebar"
+    "container container container"
     "footer footer footer";
   margin: 10px auto;
-  .header {
+  .headers {
     display: flex;
     justify-content: space-between;
     align-items: center;
     grid-area: header;
   }
-  .container {
+  .containers {
     grid-area: container;
-    position: relative;
   }
-  .sidebar {
-    grid-area: sidebar;
-    padding-top: 3rem;
-
-  }
-  .footer {
+  .footers {
     grid-area: footer;
   }
 }

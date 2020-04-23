@@ -3,6 +3,8 @@ import { Button } from "antd";
 import PostList from "components/PostList";
 import AppLayout from "components/AppLayout";
 import { useHistory } from "react-router-dom";
+import StoryList from "components/StoryList";
+import SuggestionList from "components/SuggestionList";
 
 function Home () {
   const history = useHistory();
@@ -11,7 +13,9 @@ function Home () {
   };
   const sidebar = (
     <>
-      <Button type="primary" block style={{ width: "100%" }} onClick={handleClick}>새 포스팅 쓰기</Button>
+      <Button type="primary" block style={{ marginBottom: "1rem" }} onClick={handleClick}>새 포스팅 쓰기</Button>
+      <StoryList style={{ marginBottom: "1rem" }}/>
+      <SuggestionList style={{ marginBottom: "1rem" }} />
     </>
   )
   return (

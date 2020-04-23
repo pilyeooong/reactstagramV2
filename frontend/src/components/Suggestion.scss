@@ -1,0 +1,16 @@
+.suggestion{
+  display: flex;
+  align-items: center;
+  position: relative;
+  .user{
+    display:flex;
+    padding: 10px;
+    .username{
+      padding-left: 10px;
+    }
+  }
+  .action{
+    position: absolute;
+    right: 0;
+  }
+}

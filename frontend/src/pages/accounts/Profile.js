@@ -3,7 +3,7 @@ import { useAppContext } from "stores/store";
 import { useAxios, axiosInstance } from "utils/api";
 import { Form, Input, Button, notification, Select } from "antd";
 import AppLayout from "components/AppLayout";
-import { SmileOutlined, FrownOutlined } from "@ant-design/icons";
+import { SmileOutlined } from "@ant-design/icons";
 
 function Profile() {
   const {
@@ -70,7 +70,7 @@ function Profile() {
         </Button>
       </Form.Item>
       </Form>}
-      </AppLayout>
+    </AppLayout>
   )
 }
 
