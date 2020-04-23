@@ -25,7 +25,7 @@ class User(AbstractUser):
     @property
     def avatar_url(self):
         if self.avatar:
-            return self.avatar_url
+            return self.avatar.url
         else:
             return resolve_url('pydenticon_image', self.username)
 
@@ -36,3 +36,7 @@ class User(AbstractUser):
     @property
     def follower_count(self):
         return self.followers.all().count()
+
+    @property
+    def post_count(self):
+        return self.posts.all().count()
