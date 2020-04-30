@@ -1,28 +1,28 @@
-import React, { useState, useEffect } from "react";
-import { useAppContext } from "stores/store";
-import { useAxios } from "utils/api";
+import React from "react";
+import "./UserInfo.scss";
+import { Avatar } from "antd";
 
-function UserInfo({ username }) {
-  const {
-    store: { jwtToken },
-  } = useAppContext();
-  const [userInfo, setUserInfo] = useState([]);
-  const headers = { Authorization: `JWT ${jwtToken}` };
-  const [{ data: origUserInfo }] = useAxios({
-    url: `/accounts/profile/${username}/`,
-    headers,
-  });
-
-  useEffect(() => {
-    setUserInfo(origUserInfo);
-  }, [origUserInfo]);
-
+function UserInfo({ userInfo }) {
+  const { username, follower_count, following_count, post_count, avatar_url, bio } = userInfo;
   return (
-    <div>
-      {userInfo && <div>{userInfo.username}{userInfo.follower_count}</div>}
+    <div className="user">
+      <div className="user__avatar">
+        <Avatar
+          size={150}
+          icon={<img src={"http://localhost:8000" + avatar_url} alt={username} />}
+        />
+      </div>
+      <section className="user__info">
+        <div className="user__info--name"><h2>{username}</h2></div>
+        <ul className="user__info--count">
+          <li><span>게시물</span><span>{post_count}</span></li>
+          <li><span>팔로워</span><span>{follower_count}</span></li>
+          <li><span>팔로우</span><span>{following_count}</span></li>
+        </ul>
+        <div className="user__info--bio">{bio}</div>
+      </section>
     </div>
-    
-  )
+  );
 }
 
 export default UserInfo;

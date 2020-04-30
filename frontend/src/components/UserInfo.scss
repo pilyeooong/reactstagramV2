@@ -1,0 +1,24 @@
+.user {
+  height: 13rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-bottom: 3rem;
+  &__avatar {
+    display: flex;
+    width: 18.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  &__info {
+    width: 100%;
+    &--count {
+      padding-left: 0;
+      list-style-type: none;
+      display: flex;
+      li {
+        margin-right: 3rem;
+      }
+    }
+  }
+}

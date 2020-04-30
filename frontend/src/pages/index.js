@@ -11,13 +11,13 @@ import UserDetail from "pages/UserDetail";
 function Root() {
   return (
     <>
-      <LoginRequiredRoute exact path="/" component={Home} />
       <Switch>
+        <LoginRequiredRoute exact path="/" component={Home} />
         <LoginRequiredRoute exact path="/profile-edit" component={Profile} />
         <LoginRequiredRoute exact path="/:username" component={UserDetail} />
+        <LoginRequiredRoute exact path="/post/new" component={PostNew} />
+        <Route exact path="/accounts" component={AccountRoutes} />
       </Switch>
-      <LoginRequiredRoute exact path="/post/new" component={PostNew} />
-      <Route exact path="/accounts" component={AccountRoutes} />
     </>
   )
 }

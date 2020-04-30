@@ -6,7 +6,7 @@ function Suggestion({ suggestionUser, onFollowUser }) {
   const { username, name, avatar_url, is_follow } = suggestionUser;
   return (
     <div className="suggestion">
-      <div className="user">
+      <div className="suggestion__user">
         <Avatar
           size="small"
           icon={

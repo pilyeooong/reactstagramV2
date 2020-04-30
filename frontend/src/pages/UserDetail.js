@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useAxios, axiosInstance } from "utils/api";
+import { useAxios } from "utils/api";
 import { useAppContext } from "stores/store";
 import PageLayout from "components/PageLayout";
 import UserInfo from "components/UserInfo";
+import "components/UserDetail.scss";
 
 function UserDetail({ match }) {
   console.log(match);
@@ -22,6 +23,15 @@ function UserDetail({ match }) {
     headers,
   });
 
+  const [userInfo, setUserInfo] = useState([]);
+  const [{ data: origUserInfo }] = useAxios({
+    url: `/accounts/profile/${username}/`,
+    headers,
+  });
+
+  useEffect(() => {
+    setUserInfo(origUserInfo);
+  }, [origUserInfo]);
 
   useEffect(() => {
     setPostList(origPostList);
@@ -29,15 +39,17 @@ function UserDetail({ match }) {
 
   return (
     <PageLayout>
-      <UserInfo username={username}/>
-      {postList &&
-        postList.map((post) => (
-          <img
-            src={post.photo}
-            alt={post.caption}
-            style={{ width: "300px", height: "300px" }}
-          />
-        ))}
+      {userInfo && <UserInfo userInfo={userInfo} />}
+      <div className="user__posts">
+        {postList &&
+          postList.map((post) => (
+            <img
+              src={post.photo}
+              alt={post.caption}
+              style={{ width: "300px", height: "300px" }}
+            />
+          ))}
+      </div>
     </PageLayout>
   );
 }
