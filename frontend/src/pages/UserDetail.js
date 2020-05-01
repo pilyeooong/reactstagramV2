@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useAxios } from "utils/api";
 import { useAppContext } from "stores/store";
-import PageLayout from "components/PageLayout";
-import UserInfo from "components/UserInfo";
-import "components/UserDetail.scss";
+import PageLayout from "components/Layout/PageLayout";
+import UserInfo from "components/User/UserInfo";
+import "components/User/UserDetail.scss";
+import Posting from "components/User/Posting";
 
 function UserDetail({ match }) {
-  console.log(match);
   const {
     params: { username },
   } = match;
@@ -41,15 +41,12 @@ function UserDetail({ match }) {
     <PageLayout>
       {userInfo && <UserInfo userInfo={userInfo} />}
       <div className="user__posts">
-        {postList &&
-          postList.map((post) => (
-            <img
-              src={post.photo}
-              alt={post.caption}
-              style={{ width: "300px", height: "300px" }}
-            />
+        {postList && userInfo &&
+          postList.map((post)=> (
+            <Posting post={post} userInfo={userInfo}key={post.id} />
           ))}
       </div>
+      
     </PageLayout>
   );
 }

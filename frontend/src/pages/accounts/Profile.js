@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useAppContext } from "stores/store";
 import { useAxios, axiosInstance } from "utils/api";
 import { Form, Input, Button, notification, Select } from "antd";
-import AppLayout from "components/AppLayout";
+import AppLayout from "components/Layout/AppLayout";
 import { SmileOutlined } from "@ant-design/icons";
 
 function Profile() {

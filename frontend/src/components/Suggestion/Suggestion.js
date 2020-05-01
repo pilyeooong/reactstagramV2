@@ -1,21 +1,24 @@
 import React from "react";
 import { Button, Avatar } from "antd";
 import "./Suggestion.scss";
+import { Link } from "react-router-dom";
 
 function Suggestion({ suggestionUser, onFollowUser }) {
   const { username, name, avatar_url, is_follow } = suggestionUser;
   return (
     <div className="suggestion">
       <div className="suggestion__user">
-        <Avatar
-          size="small"
-          icon={
-            <img
-              src={"http://localhost:8000" + avatar_url}
-              alt={`${username}'s avatar`}
-            />
-          }
-        />
+        <Link to={`${username}/`}>
+          <Avatar
+            size="small"
+            icon={
+              <img
+                src={"http://localhost:8000" + avatar_url}
+                alt={`${username}'s avatar`}
+              />
+            }
+          />
+        </Link>
         <div className="username">{name.length === 0 ? username : name}</div>
       </div>
       <div className="action">

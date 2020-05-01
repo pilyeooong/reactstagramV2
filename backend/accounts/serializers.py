@@ -29,10 +29,3 @@ class SuggestionUserSerializer(serializers.ModelSerializer):
         model = User
         fields = ['username', 'name', 'avatar_url']
 
-
-class PostSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Post
-        fields = ['id', 'photo']
-
-

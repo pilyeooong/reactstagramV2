@@ -2,7 +2,7 @@ import React from "react";
 import "./Post.scss";
 import { Avatar, Card } from "antd";
 import { HeartOutlined, HeartFilled } from "@ant-design/icons";
-import CommentList from "./CommentList";
+import CommentList from "../Comment/CommentList";
 import { Link } from "react-router-dom";
 
 

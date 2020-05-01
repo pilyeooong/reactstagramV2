@@ -1,10 +1,10 @@
 import React from "react";
 import { Button } from "antd";
-import PostList from "components/PostList";
-import AppLayout from "components/AppLayout";
+import PostList from "components/Post/PostList";
+import AppLayout from "components/Layout/AppLayout";
 import { useHistory } from "react-router-dom";
-import StoryList from "components/StoryList";
-import SuggestionList from "components/SuggestionList";
+import StoryList from "components/Story/StoryList";
+import SuggestionList from "components/Suggestion/SuggestionList";
 
 function Home () {
   const history = useHistory();

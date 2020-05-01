@@ -28,7 +28,6 @@ function PostList() {
         method,
         headers
       });
-      console.log(response);
       setPostList(prevList => {
         return prevList.map(currentPost =>
             currentPost === post ? { ...currentPost, is_like: isLike } : currentPost

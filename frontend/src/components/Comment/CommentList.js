@@ -29,6 +29,7 @@ function CommentList ({ post }) {
       <Input.TextArea 
         value={commentContent}
         onChange={(e) => setCommentContent(e.target.value)}
+        style={{ marginTop: "1rem" }}
       />
       <Button onClick={handleComment}>댓글쓰기</Button>
     </div>
