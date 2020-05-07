@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useAxios, axiosInstance } from "utils/api";
 import { useAppContext } from "stores/store";
 import Comment from "./Comment";
-import { Input, Button} from "antd";
+import { Input, Button } from "antd";
 
 function CommentList ({ post }) {
   const { store: { jwtToken }} = useAppContext();
@@ -31,7 +31,7 @@ function CommentList ({ post }) {
         onChange={(e) => setCommentContent(e.target.value)}
         style={{ marginTop: "1rem" }}
       />
-      <Button onClick={handleComment}>댓글쓰기</Button>
+      <Button type="primary" block onClick={handleComment} style={{ marginTop: "1rem" }}>댓글쓰기</Button>
     </div>
   )
 };

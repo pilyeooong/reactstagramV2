@@ -25,7 +25,7 @@ function PageLayout({ children }) {
           </Menu>
         </div>
         <div className="containers">{children}</div>
-        <div className="footers">footer</div>
+        <div className="footers">&copy; 2020 reactstagram.pilyeooong</div>
       </div>
     </>
   );

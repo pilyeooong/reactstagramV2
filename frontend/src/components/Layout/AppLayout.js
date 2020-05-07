@@ -26,7 +26,7 @@ function AppLayout({ children, sidebar }) {
         </div>
         <div className="container">{children}</div>
         <div className="sidebar">{sidebar}</div>
-        <div className="footer">footer</div>
+        <div className="footer">&copy; 2020 reactstagram.pilyeooong</div>
       </div>
     </>
   );

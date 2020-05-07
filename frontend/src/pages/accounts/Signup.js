@@ -3,6 +3,7 @@ import { Form, Input, Button, notification } from "antd";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { SmileOutlined, FrownOutlined } from "@ant-design/icons";
+import { axiosInstance } from "utils/api";
 
 function Singup() {
   const history = useHistory();
@@ -12,9 +13,8 @@ function Singup() {
     async function handleSignUp() {
       const { username, password } = values;
       const data = { username, password };
-      const apiUrl = "http://localhost:8000/accounts/signup/";
       try {
-        await axios.post(apiUrl, data);
+        await axiosInstance.post("/accounts/signup/", data);
         notification.open({
           message: "회원가입 성공",
           description: "로그인 페이지로 이동합니다.",

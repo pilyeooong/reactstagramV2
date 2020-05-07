@@ -37,7 +37,7 @@ class SuggestionListAPIView(ListAPIView):
 class ProfileView(APIView):
     def get(self, request, username):
         user = get_object_or_404(User, username=username, is_active=True)
-        serializer = UserSerializer(user)
+        serializer = UserSerializer(user, context={'request': self.request})
 
         return Response(serializer.data, status=status.HTTP_200_OK)
 

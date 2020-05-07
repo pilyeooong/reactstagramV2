@@ -11,7 +11,7 @@ function Comment ({ comment }) {
       avatar={
         <Link to={`${username}`}>
           <Avatar 
-            src={"http://localhost:8000" + avatar_url}
+            src={avatar_url}
             alt={username}
           />
         </Link>
@@ -19,7 +19,7 @@ function Comment ({ comment }) {
       content={<p>{message}</p>}
       datetime={
         <Tooltip title={moment().format(created_at)}>
-          <span>{moment().fromNow()}</span>
+          <span>{moment(created_at).fromNow()}</span>
         </Tooltip>
       }
     >

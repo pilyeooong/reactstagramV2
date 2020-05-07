@@ -2,7 +2,7 @@
   height: 13rem;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #efefef;
   margin-bottom: 3rem;
   &__avatar {
     display: flex;
@@ -16,8 +16,14 @@
       padding-left: 0;
       list-style-type: none;
       display: flex;
+      font-size: 16px;
+      color: #262626;
       li {
         margin-right: 3rem;
+      }
+      .count{
+        font-weight: 600;
+        font-size: 18px;
       }
     }
   }

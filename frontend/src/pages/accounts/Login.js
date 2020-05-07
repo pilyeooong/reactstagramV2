@@ -3,6 +3,7 @@ import { useHistory, useLocation } from "react-router-dom";
 import { Form, Input, Button, notification, Card } from "antd";
 import { SmileOutlined, FrownOutlined } from "@ant-design/icons";
 import axios from "axios";
+import { axiosInstance } from "utils/api";
 import { useAppContext, setToken } from "stores/store";
 
 function Login () {
@@ -16,9 +17,8 @@ function Login () {
     async function handleLogin() {
       const { username, password } = value;
       const data = { username, password };
-      const apiUrl = "http://localhost:8000/accounts/token/";
       try{
-        const response = await axios.post(apiUrl, data);
+        const response = await axiosInstance.post("/accounts/token/", data);
         const { data: { token : jwtToken } } = response;
         dispatch(setToken(jwtToken));
         notification.open({
