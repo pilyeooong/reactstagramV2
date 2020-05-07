@@ -10,8 +10,6 @@ DEFAULT_FILE_STORAGE = "backend.storages.MediaAzureStorage"  # media
 
 # AZURE_ACCOUNT_NAME = os.environ["AZURE_ACCOUNT_NAME"]
 # AZURE_ACCOUNT_KEY = os.environ["AZURE_ACCOUNT_KEY"]
-AZURE_ACCOUNT_NAME = "reactstagramv2"
-AZURE_ACCOUNT_KEY = "5bumq8xuCMGE8PIBb825SOSISXf7z8SnmB99CgU0dYrQVpA2K/KtMWs6mL/frB7CD5RXDcFpcJXdC595Ew4BPQ=="
 
 # CORS_ORIGIN_WHITELIST = os.environ.get("CORS_ORIGIN_WHITELIST", '').split(",")
 
