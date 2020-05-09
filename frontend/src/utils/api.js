@@ -1,8 +1,9 @@
 import axios from "axios";
 import { makeUseAxios } from "axios-hooks";
+import { API_HOST } from "Constants";
 
 export const axiosInstance = axios.create({
-  baseURL: "http://localhost:8000"
+  baseURL: API_HOST
 })
 
 export const useAxios = makeUseAxios({
