@@ -46,6 +46,7 @@ class ProfileEditView(RetrieveUpdateDestroyAPIView):
     serializer_class = UserSerializer
 
     def get_object(self):
+        print(dir(self.request))
         obj = get_object_or_404(User, username=self.request.user)
         return obj
 
