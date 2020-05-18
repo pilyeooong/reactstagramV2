@@ -12,7 +12,7 @@ urlpatterns = [
     path('token/refresh', refresh_jwt_token),
     path('token/verify', verify_jwt_token),
     path('profile/<str:username>/', views.ProfileView.as_view(), name='profile'),
-    path('profile-edit/', views.ProfileEditView.as_view(), name='profile_edit'),
+    path('profile/', views.ProfileEditView.as_view(), name='profile_edit'),
     path('suggestion/', views.SuggestionListAPIView.as_view(), name='suggestion'),
     path('follow/', views.user_follow, name='user_follow'),
     path('unfollow/', views.user_unfollow, name='user_follow'),

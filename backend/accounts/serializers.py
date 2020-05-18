@@ -19,8 +19,9 @@ class SignupSerializer(serializers.ModelSerializer):
 
 
 class UserSerializer(serializers.ModelSerializer):
-    avatar_url = serializers.SerializerMethodField("avatar_url_field")
+    avatar_url = serializers.SerializerMethodField('avatar_url_field')
     is_self = serializers.SerializerMethodField('is_self_field')
+    is_following = serializers.SerializerMethodField('is_following_field')
 
     def avatar_url_field(self, author):
         if re.match(r"^https?://", author.avatar_url):
@@ -36,11 +37,17 @@ class UserSerializer(serializers.ModelSerializer):
                 return True
             else:
                 return False
+    
+    def is_following_field(self, author):
+        if 'request' in self.context:
+            user = self.context['request'].user
+            return user.followings.filter(pk=author.id).exists()
+        return False
 
     class Meta:
         model = User
         fields = ['id', 'username', 'avatar', 'avatar_url', 'email', 'gender', 'phone_number',
-                  'followers', 'followings', 'follower_count', 'following_count', 'post_count', 'bio', 'is_self']
+                  'followers', 'followings', 'follower_count', 'following_count', 'post_count', 'bio', 'is_self', 'is_following']
 
 
 class SuggestionUserSerializer(serializers.ModelSerializer):
