@@ -49,10 +49,9 @@ function PostNewForm() {
     });
     const headers = { Authorization: `JWT ${jwtToken}` };
     try {
-      const response = await axiosInstance.post("posts/", formData, {
+      await axiosInstance.post("posts/", formData, {
         headers,
       });
-      console.log("success response:", response);
       history.push("/");
     } catch (error) {
       if (error.response) {
