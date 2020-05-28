@@ -41,7 +41,6 @@ function SuggestionList({ style }) {
   return (
     <div style={style}>
       {loading && <div>loading</div>}
-      <button onClick={() => refetch()}>Reload</button>
       <Card title="Suggestions for you" size="small">
         {userList &&
           userList.map((suggestionUser) => (
