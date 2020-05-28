@@ -3,7 +3,7 @@ import { Input, Menu } from "antd";
 import LogoImage from "assets/logo.png";
 import "./AppLayout.scss";
 import { Link } from "react-router-dom";
-function AppLayout({ children, sidebar }) {
+function AppLayout({ children, sidebar, username }) {
   return (
     <>
       <div className="wrapper">
@@ -19,9 +19,9 @@ function AppLayout({ children, sidebar }) {
             style={{ width: 200 }}
           />
           <Menu mode="horizontal">
-            <Menu.Item><Link to="profile-edit">프로필</Link></Menu.Item>
-            <Menu.Item>메뉴2</Menu.Item>
-            <Menu.Item>메뉴3</Menu.Item>
+            <Menu.Item><Link to="profile-edit">내정보</Link></Menu.Item>
+            <Menu.Item>탐색</Menu.Item>
+            <Menu.Item><Link to={`${username}`}>프로필</Link></Menu.Item>
           </Menu>
         </div>
         <div className="container">{children}</div>
