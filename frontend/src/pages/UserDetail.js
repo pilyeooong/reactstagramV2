@@ -38,16 +38,20 @@ function UserDetail({ match }) {
   }, [origPostList]);
 
   return (
-    <PageLayout>
-      {userInfo && <UserInfo userInfo={userInfo} />}
-      <div className="user__posts">
-        {postList && userInfo &&
-          postList.map((post)=> (
-            <Posting post={post} userInfo={userInfo}key={post.id} />
-          ))}
-      </div>
-      
-    </PageLayout>
+    <>
+      {userInfo && (
+        <PageLayout username={userInfo.username}>
+          {userInfo && <UserInfo userInfo={userInfo} />}
+          <div className="user__posts">
+            {postList &&
+              userInfo &&
+              postList.map((post) => (
+                <Posting post={post} userInfo={userInfo} key={post.id} />
+              ))}
+          </div>
+        </PageLayout>
+      )}
+    </>
   );
 }
 
