@@ -4,6 +4,7 @@ import { Avatar, Button, notification } from "antd";
 import { SmileOutlined } from "@ant-design/icons";
 import { useAppContext, deleteToken } from "stores/store";
 import { useHistory } from "react-router-dom";
+import FollowButton from "components/Follow/FollowButton";
 
 function UserInfo({ userInfo }) {
   const { dispatch } = useAppContext();
@@ -16,6 +17,7 @@ function UserInfo({ userInfo }) {
     avatar_url,
     bio,
     is_self,
+    is_following
   } = userInfo;
 
   const logOut = () => {
@@ -56,6 +58,7 @@ function UserInfo({ userInfo }) {
           </li>
         </ul>
         <div className="user__info--bio">{bio}</div>
+        {!is_self && <FollowButton username={username} is_following={is_following} />}
       </section>
     </div>
   );

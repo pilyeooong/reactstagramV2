@@ -3,6 +3,7 @@ import { Modal, Avatar, Input, Button } from "antd";
 import { axiosInstance } from "utils/api";
 
 import "./Posting.scss";
+import FollowButton from "components/Follow/FollowButton";
 import { useAppContext } from "stores/store";
 import ModalComment from "./ModalComment";
 
@@ -39,7 +40,7 @@ function Posting({ post, userInfo }) {
   };
 
   const { visible } = isVisible;
-  const { avatar_url, username } = userInfo;
+  const { avatar_url, username, is_following, is_self } = userInfo;
   const { id, photo, caption } = post;
 
   const {
@@ -96,7 +97,8 @@ function Posting({ post, userInfo }) {
                   />
                 }
               />
-              <span className="modal__header--name">{username}</span>
+              <span className="modal__header--name" style={{ marginRight: "1rem" }}>{username}</span>
+              {!is_self && <FollowButton username={username} is_following={is_following} />}
             </div>
             <div className="modal__caption">
               <div className="caption">{caption}</div>
