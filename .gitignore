@@ -6,4 +6,5 @@ media/
 staticfiles/
 static/
 .env
+.env.propduction
 prodmemo.txt
