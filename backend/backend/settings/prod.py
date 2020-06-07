@@ -1,8 +1,9 @@
 from .common import *
 
 
-# DEBUG = False
+DEBUG = False
 DEBUG = os.environ.get('DEBUG') in ['1', 't', 'true', 'T', 'True']
+
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", '').split(",")
 
 STATICFILES_STORAGE = "backend.storages.StaticAzureStorage"   # static
@@ -13,15 +14,6 @@ AZURE_ACCOUNT_KEY = os.environ["AZURE_ACCOUNT_KEY"]
 
 CORS_ORIGIN_WHITELIST = os.environ.get("CORS_ORIGIN_WHITELIST", '').split(",")
 
-DATABASES = {
-    'default': {
-        'ENGINE': os.environ.get('DB_ENGINE', 'django.db.backends.postgresql'),
-        'HOST': os.environ.get('DB_HOST'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'NAME': os.environ.get('DB_NAME', 'postgres'),
-    },
-}
 
 LOGGING = {
     'version': 1,
