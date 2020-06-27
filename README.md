@@ -9,6 +9,12 @@ Django + DRF + React.js 로 구현한 인스타그램 컨셉의 사이드 프로
 - PostgreSQL
 - React.js
 
+**Deploy**
+- Docker (Image & Container)
+- Azure DB
+- Azure Storages
+- Azure App Service
+
 
 ----------
 
@@ -23,12 +29,6 @@ Django + DRF + React.js 로 구현한 인스타그램 컨셉의 사이드 프로
 **Frontend**
 1. yarn install (프로젝트 폴더, 실행에 요구되는 패키지 다운로드)
 2. yarn start
-
-**Deploy**
-- Docker (Image & Container)
-- Azure DB
-- Azure Storages
-- Azure App Service
 
 
 ----------
