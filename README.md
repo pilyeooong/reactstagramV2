@@ -7,14 +7,14 @@
 <br />
 
 ## **사용 스택**
-### Back-End
+### ✔️ Back-End
   - Python (3.8.0)
   - Django (3.0.5)
   - Django Rest Framework
   - PostgreSQL
-### Front-End
+### ✔️ Front-End
   - React.js
-### Infra
+### ✔️ Infra
   - Docker (Image & Container)
   - Azure DB
   - Azure Storages
@@ -62,7 +62,7 @@
 
 ### ETC
 인스타그램의 모든 기능을 넣진 않았지만, 큼지막한 기능들은 구현해 본 것 같습니다.  
-또한 React.js 입문 및 사용에 익숙해질 수 있던 기회였습니다.  
+또한 React.js 입문 및 사용에 익숙해질 수 있던 기회였습니다.
 현재 백엔드 서버는 Heroku, 프론트 화면은 Azure를 통해 배포 중입니다.  
 <br />
 
