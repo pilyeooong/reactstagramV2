@@ -5,10 +5,23 @@
 > 강의 복습 및 개인 공부를 위해 더 기능을 추가하고 기록해보고자 시작하였습니다.  
 <br />
 
-----------
+
+### **사용 스택**
+- Python (3.8.0)
+- Django (3.0.5)
+- Django Rest Framework
+- PostgreSQL
+- React.js
+
+### **인프라**
+- Docker (Image & Container)
+- Azure DB
+- Azure Storages
+- Azure App Service
+
 <br />
 
-### **Installation**
+### **실행해보기**
 **Backend**
   1. pyenv activate `'Your virtualenv'`
   2. pip install -r requirements.txt
@@ -20,24 +33,8 @@
 2. yarn start
 <br />
 
---------
+------
 <br />
-
-**Stack**
-- Python (3.8.0)
-- Django (3.0.5)
-- Django Rest Framework
-- PostgreSQL
-- React.js
-
-**Deploy**
-- Docker (Image & Container)
-- Azure DB
-- Azure Storages
-- Azure App Service
-
--------
-
 
 ### 개발
 <br />
