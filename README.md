@@ -6,19 +6,22 @@
 > 강의 복습 및 개인 공부를 위해 더 기능을 추가하고 기록해보고자 시작하였습니다.  
 <br />
 
-### **사용 스택**
-- Python (3.8.0)
-- Django (3.0.5)
-- Django Rest Framework
-- PostgreSQL
-- React.js
-- Docker (Image & Container)
-- Azure DB
-- Azure Storages
-- Azure App Service
+## **사용 스택**
+### Back-End
+  - Python (3.8.0)
+  - Django (3.0.5)
+  - Django Rest Framework
+  - PostgreSQL
+### Front-End
+  - React.js
+### Infra
+  - Docker (Image & Container)
+  - Azure DB
+  - Azure Storages
+  - Azure App Service
 <br />
 
-### **How to Run on your Machine**
+## **How to Run on your Machine**
 **Backend**
   1. pyenv activate `'Your virtualenv'`
   2. pip install -r requirements.txt
@@ -33,7 +36,7 @@
 ------
 <br />
 
-### 개발
+## 개발
 <br />
 
 ✔️ **Back-End**
