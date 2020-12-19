@@ -1,10 +1,10 @@
 # **Reactstagram**
+<br />
 
 > 에듀캐스트 AskDjango 강의를 들으며 만들게 된 토이 프로젝트입니다.  
 > Django + DRF + React.js 로 구현한 인스타그램 컨셉의 프로젝트입니다.  
 > 강의 복습 및 개인 공부를 위해 더 기능을 추가하고 기록해보고자 시작하였습니다.  
 <br />
-
 
 ### **사용 스택**
 - Python (3.8.0)
@@ -12,16 +12,13 @@
 - Django Rest Framework
 - PostgreSQL
 - React.js
-
-### **인프라**
 - Docker (Image & Container)
 - Azure DB
 - Azure Storages
 - Azure App Service
-
 <br />
 
-### **실행해보기**
+### **How to Run on your Machine**
 **Backend**
   1. pyenv activate `'Your virtualenv'`
   2. pip install -r requirements.txt
@@ -64,9 +61,7 @@
 인스타그램의 모든 기능을 넣진 않았지만, 큼지막한 기능들은 구현해 본 것 같습니다.  
 또한 React.js 입문 및 사용에 익숙해질 수 있던 기회였습니다.  
 현재 백엔드 서버는 Heroku, 프론트 화면은 Azure를 통해 배포 중입니다.  
-
-
-
+<br />
 
 ### **Contact**
 - pilyeooong@gmail.com
