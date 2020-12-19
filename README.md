@@ -4,7 +4,40 @@
 Django + DRF + React.js 로 구현한 인스타그램 컨셉의 프로젝트입니다.  
 강의 복습 및 개인 공부를 위해 더 기능을 추가하고 기록해보고자 시작하였습니다.  
 
-  
+
+----------
+
+
+### **Installation**
+**Backend**
+  1. pyenv activate `'Your virtualenv'`
+  2. pip install -r requirements.txt
+  3. python manage.py migrate
+  4. python manage.py runserver 
+
+**Frontend**
+1. yarn install (프로젝트 폴더, 실행에 요구되는 패키지 다운로드)
+2. yarn start
+
+
+--------
+
+
+**Stack**
+- Python (3.8.0)
+- Django (3.0.5)
+- Django Rest Framework
+- PostgreSQL
+- React.js
+
+**Deploy**
+- Docker (Image & Container)
+- Azure DB
+- Azure Storages
+- Azure App Service
+
+-------
+
 
 ### 개발
 
@@ -30,39 +63,11 @@ Django + DRF + React.js 로 구현한 인스타그램 컨셉의 프로젝트입�
 
 ✔️ **ETC**
 
-인스타그램의 모든 기능을 넣진 않았지만, 큼지막한 기능들은 구현해 본 것 같습니다.
-또한 React.js 입문 및 사용에 익숙해질 수 있던 기회였습니다.
-현재 백엔드 서버는 Heroku, 프론트 화면은 Azure를 통해 배포 중입니다.
+인스타그램의 모든 기능을 넣진 않았지만, 큼지막한 기능들은 구현해 본 것 같습니다.  
+또한 React.js 입문 및 사용에 익숙해질 수 있던 기회였습니다.  
+현재 백엔드 서버는 Heroku, 프론트 화면은 Azure를 통해 배포 중입니다.  
 
 
-----------
-
-### **Installation**
-**Backend**
-  1. pyenv activate `'Your virtualenv'`
-  2. pip install -r requirements.txt
-  3. python manage.py migrate
-  4. python manage.py runserver 
-
-**Frontend**
-1. yarn install (프로젝트 폴더, 실행에 요구되는 패키지 다운로드)
-2. yarn start
-
-
---------
-
-**Stack**
-- Python (3.8.0)
-- Django (3.0.5)
-- Django Rest Framework
-- PostgreSQL
-- React.js
-
-**Deploy**
-- Docker (Image & Container)
-- Azure DB
-- Azure Storages
-- Azure App Service
 
 
 ### **Contact**
